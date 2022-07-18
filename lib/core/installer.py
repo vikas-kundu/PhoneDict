@@ -15,11 +15,11 @@ def start_install():
             sys.exit()
         else:
             print("Installing Pandas and Psutil, please wait...")
-            if(os.system('sudo pip3 install pandas')!=0):
+            if(os.system('pip3 install pandas')!=0):
                 print("\nPandas Installation Failed!")
                 time.sleep(2)
                 sys.exit()
-            elif(os.system('sudo pip3 install psutil')!=0):
+            elif(os.system('pip3 install psutil')!=0):
                 print("\nPsutil Installation Failed!")
                 time.sleep(2)
                 sys.exit()
