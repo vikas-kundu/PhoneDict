@@ -15,12 +15,8 @@ def start_install():
             sys.exit()
         else:
             print("Installing Pandas and Psutil, please wait...")
-            if(os.system('pip3 install pandas')!=0):
-                print("\nPandas Installation Failed!")
-                time.sleep(2)
-                sys.exit()
-            elif(os.system('pip3 install psutil')!=0):
-                print("\nPsutil Installation Failed!")
+            if(os.system('pip3 install -r requirements.txt')!=0):
+                print("\nInstallation Failed!")
                 time.sleep(2)
                 sys.exit()
             else:
@@ -41,12 +37,8 @@ def start_install():
 
         else:
             print("Installing Pandas and Psutil, please wait...")
-            if(os.system(str(default_dir+"/scripts/pip3.exe install pandas"))!=0):
-                print("\nPandas Installation Failed!")
-                time.sleep(2)
-                sys.exit()
-            elif(os.system(str(default_dir+"/scripts/pip3.exe install psutil"))!=0):
-                print("\nPsutil Installation Failed!")
+            if(os.system(str(default_dir+"/scripts/pip3.exe install -r requirements.txt"))!=0):
+                print("\nInstallation Failed!")
                 time.sleep(2)
                 sys.exit()
             else:
